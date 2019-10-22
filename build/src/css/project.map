@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "project.css",
+	"sources": [
+		"../../../dev/project.scss"
+	],
+	"sourcesContent": [
+		"@font-face{\r\n    font-family: \"BebasNeue\";\r\n    src: url(\"../font/bebas_neue/BebasNeue-Regular.otf\")format(\"opentype\");\r\n    src: url(\"../font/bebas_neue/BebasNeue-Regular.woff\")format(\"woff\");\r\n    src: url(\"../font/bebas_neue/BebasNeue-Regular.woff2\")format(\"woff2\");\r\n}\r\n\r\nbody {\r\n    height: 100%;\r\n    background-color: #121212;\r\n    font-family: \"BebasNeue\";\r\n    color: white;\r\n}\r\n\r\n.navbar-dark{\r\n    background-color: #121212!important;\r\n}\r\n\r\n#logo{\r\n    height: 50px;\r\n    width: 50px;\r\n}\r\n\r\n@mixin largura-tela($tela){\r\n    @if $tela == portateis {\r\n\r\n    }\r\n}\r\n\r\n.banner{\r\n    font-size: 80%px;\r\n}\r\n\r\n"
+	],
+	"names": [],
+	"mappings": "AAAA,UAAU;EACN,WAAW,EAAE,WAAW;EACxB,GAAG,EAAE,+CAA+C,CAAA,kBAAkB;EACtE,GAAG,EAAE,gDAAgD,CAAA,cAAc;EACnE,GAAG,EAAE,iDAAiD,CAAA,eAAe;;;;AAGzE,AAAA,IAAI,CAAC;EACD,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAAE,OAAO;EACzB,WAAW,EAAE,WAAW;EACxB,KAAK,EAAE,KAAK;CACf;;;AAED,AAAA,YAAY,CAAA;EACR,gBAAgB,EAAE,OAAO,CAAA,UAAU;CACtC;;;AAED,AAAA,KAAK,CAAA;EACD,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;CACd;;;AAQD,AAAA,OAAO,CAAA;EACH,SAAS,EAAE,KAAK;CACnB"
+}

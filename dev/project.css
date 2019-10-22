@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../font/bebas_neue/BebasNeue-Regular.otf") format("opentype");
+  src: url("../font/bebas_neue/BebasNeue-Regular.woff") format("woff");
+  src: url("../font/bebas_neue/BebasNeue-Regular.woff2") format("woff2"); }
+body {
+  height: 100%;
+  background-color: #121212;
+  font-family: "BebasNeue";
+  color: white; }
+
+.navbar-dark {
+  background-color: #121212 !important; }
+
+#logo {
+  height: 50px;
+  width: 50px; }
+
+.banner {
+  font-size: 80%; }

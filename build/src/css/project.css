@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../font/bebas_neue/BebasNeue-Regular.otf") format("opentype");
+  src: url("../font/bebas_neue/BebasNeue-Regular.woff") format("woff");
+  src: url("../font/bebas_neue/BebasNeue-Regular.woff2") format("woff2"); }
+body {
+  height: 100%;
+  background-color: #121212;
+  font-family: "BebasNeue";
+  color: white; }
+
+.navbar-dark {
+  background-color: #121212 !important; }
+
+#logo {
+  height: 50px;
+  width: 50px;
+  z-index: 5; }
+
+.text-fundo-branco {
+  color: black;
+  z-index: 5;
+  position: relative; }
+
+.banner {
+  font-size: 100px; }
+  @media (max-width: 766px) {
+    .banner {
+      font-size: 100px !important; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .banner {
+      font-size: 200px !important; } }
+  @media (min-width: 1024px) {
+    .banner {
+      font-size: 250px !important; } }
+
+.switch-banner {
+  z-index: 2;
+  padding: 0px;
+  margin: 0px;
+  position: relative; }
+
+.player-overlay {
+  z-index: 3;
+  position: relative; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .player-overlay {
+      height: 350px;
+      top: -650px;
+      left: -75px; } }
+
+.background-1 {
+  width: 100%;
+  z-index: 1;
+  position: relative; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .background-1 {
+      height: 40%;
+      left: 0px;
+      top: -270px; } }
+
+.background-2 {
+  position: relative;
+  width: 100%;
+  z-index: 4; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .background-2 {
+      height: 400px;
+      left: 0px;
+      top: -650px; } }
+
+#tituloloja {
+  top: -950px;
+  font-size: 30px;
+  text-color: black; }

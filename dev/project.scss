@@ -1,0 +1,123 @@
+@font-face{
+    font-family: "BebasNeue";
+    src: url("../font/bebas_neue/BebasNeue-Regular.otf")format("opentype");
+    src: url("../font/bebas_neue/BebasNeue-Regular.woff")format("woff");
+    src: url("../font/bebas_neue/BebasNeue-Regular.woff2")format("woff2");
+}
+
+@mixin smartphone{
+    @media (max-width: #{$tablet - 2px}){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (min-width: #{$tablet}) and (max-width: #{$desktop - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (min-width: #{$desktop}){
+        @content;
+    }
+}
+
+@mixin config-texto($top,$size,$text-color){
+    top: #{$top};
+    font-size: #{$size};
+    text-color: #{$text-color};
+}
+
+body {
+    height: 100%;
+    background-color: #121212;
+    font-family: "BebasNeue";
+    color: white;
+}
+
+.navbar-dark{
+    background-color: #121212!important;
+}
+
+#logo{
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+}
+
+.text-fundo-branco{
+    color: black;
+    z-index: 5;
+    position: relative;
+}
+
+$tablet: 768px;
+$desktop: 1024px;
+
+.banner{
+    @include smartphone{
+        font-size: 100px !important;
+    }
+
+    @include tablet{
+        font-size: 200px !important;
+    }
+
+    @include desktop{
+        font-size: 250px !important;
+    }
+
+    font-size: 100px;
+}
+
+.switch-banner{
+    z-index: 2;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+}
+
+.player-overlay{
+    z-index: 3;
+    position: relative;
+    
+    @include tablet{
+        height: 350px;
+        top: -650px;
+        left: -75px;
+    }
+
+    @include desktop{
+
+    }
+    
+}
+
+.background-1{
+    width: 100%;
+    z-index: 1;
+    position: relative;
+
+    @include tablet{
+        height: 40%;
+        left: 0px;
+        top: -270px;
+    }
+}
+
+.background-2{
+    position: relative;
+    width: 100%;
+    z-index: 4;
+
+    @include tablet{
+        height: 400px;
+        left: 0px;
+        top: -650px;
+    }
+}
+
+#tituloloja{
+    @include config-texto(-950px,30px,black);
+}
