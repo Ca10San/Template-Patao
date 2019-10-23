@@ -10,6 +10,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="src/css/bootstrap.min.css">
 
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="src/fontawesome/css/all.css">
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="src/js/jquery.3.4.1.min.js"></script>
@@ -59,50 +62,255 @@
       </nav>
     </div>
 
+    <!-- PRIMEIRA SEÇÃO DA LOJA -->
     <div class="row">
       <div class="col text-center">
           <div class="banner">
               <span class="switch-banner">F</span>u<span class="switch-banner">t</span>e<span class="switch-banner">b</span>o<span class="switch-banner">l</span>
           </div>
           <!-- DIVISORIA GRADIENTE -->
-          <img src="src/img/background1.png" class="background-1">   
+          <img src="src/img/backgrounds/background1.png" class="background-1">   
           <!--  -->
-          <img src="src/img/jogador.png" class="player-overlay">
+          <img src="src/img/jogadores/jogador1.png" class="player-overlay">
       </div>
     </div>
 
+    <!-- SEGUNDA SEÇÃO DO SITE -->
     <div class="row">
       <div class="col text-center">
         <!-- DIVISORIA BRANCA -->
-        <img src="src/img/background2.png" class="background-2">
+        <img src="src/img/backgrounds/background2.png" class="background-2">
         <span class="text-fundo-branco" id="tituloloja">
           Loja do Patão
         </span>
 
         <!-- CARROSSEL DA LOJA -->
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <button type="button" class="btn btn-warning">testetesteteste</button>
+        <div id="carrosselloja">
+          <div id="carouselExampleFade" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Para que o Carousel funcione é necessário que tenha pelo menos um item macado como active, que será o item inicial -->
+              <div class="carousel-item active">
+                <!-- cada item-carousel-loja é um item mostrado -->
+                <div class="item-carousel-loja">
+                  <span class="item-carousel-loja-titulo">
+                    Patão Therma Hoodie 
+                  </span>
+                  <br>
+                  <span class="item-carousel-loja-preco">
+                    46,76
+                  </span>
+                  <br>
+                  <span class="item-carousel-loja-compre">
+                    <a href="#">
+                        Compre Agora
+                    </a>
+                  </span>
+                  <img src="src/img/carousel-items/Hoodie.png" class="item-carousel-loja-img">
+                </div>
+                <!-- fim item-carousel-loja -->
+                
+                <div class="item-carousel-loja">
+                  <span class="item-carousel-loja-titulo">
+                    Patão Super Sneakers 
+                  </span>
+                  <br>
+                  <span class="item-carousel-loja-preco">
+                    23,95
+                  </span>
+                  <br>
+                  <span class="item-carousel-loja-compre">
+                    <a href="#">
+                        Compre Agora
+                    </a>
+                  </span>
+                  <img src="src/img/carousel-items/Sneakers.png" class="item-carousel-loja-img">
+                </div>
+                <!-- fim item-carousel-loja -->
+
+                <div class="item-carousel-loja">
+                    <span class="item-carousel-loja-titulo">
+                      Patão Sport Sneakers
+                    </span>
+                    <br>
+                    <span class="item-carousel-loja-preco">
+                      55,11
+                    </span>
+                    <br>
+                    <span class="item-carousel-loja-compre">
+                      <a href="#">
+                          Compre Agora
+                      </a>
+                    </span>
+                    <img src="src/img/carousel-items/Sneakers2.png" class="item-carousel-loja-img">
+                </div>
+                <!-- fim item-carousel-loja -->
+
+              </div>
+              <!-- fim do carousel item active-->
+
+              <div class="carousel-item">
+
+                  <!-- cada item-carousel-loja é um item mostrado -->
+                <div class="item-carousel-loja">
+                  <span class="item-carousel-loja-titulo">
+                    Patão Super Sneakers 
+                  </span>
+                  <br>
+                  <span class="item-carousel-loja-preco">
+                    23,95
+                  </span>
+                  <br>
+                  <span class="item-carousel-loja-compre">
+                    <a href="#">
+                        Compre Agora
+                    </a>
+                  </span>
+                  <img src="src/img/carousel-items/Sneakers.png" class="item-carousel-loja-img">
+                </div>
+                <!-- fim item-carousel-loja -->
+
+                <div class="item-carousel-loja">
+                  <span class="item-carousel-loja-titulo">
+                    Patão Therma Hoodie 
+                  </span>
+                  <br>
+                  <span class="item-carousel-loja-preco">
+                    46,76
+                  </span>
+                  <br>
+                  <span class="item-carousel-loja-compre">
+                    <a href="#">
+                        Compre Agora
+                    </a>
+                  </span>
+                  <img src="src/img/carousel-items/Hoodie.png" class="item-carousel-loja-img">
+                </div>
+                <!-- fim item-carousel-loja -->
+
+                <div class="item-carousel-loja">
+                  <span class="item-carousel-loja-titulo">
+                    Patão Sport Sneakers
+                  </span>
+                  <br>
+                  <span class="item-carousel-loja-preco">
+                    55,11
+                  </span>
+                  <br>
+                  <span class="item-carousel-loja-compre">
+                    <a href="#">
+                        Compre Agora
+                    </a>
+                  </span>
+                  <img src="src/img/carousel-items/Sneakers2.png" class="item-carousel-loja-img">
+                </div>
+                <!-- fim item-carousel-loja -->
+
+              </div>
+              <!-- fim do carousel item -->
+
+              <div class="carousel-item">
+                
+                <!-- cada item-carousel-loja é um item mostrado -->
+                <div class="item-carousel-loja">
+                  <span class="item-carousel-loja-titulo">
+                    Patão Super Sneakers 
+                  </span>
+                  <br>
+                  <span class="item-carousel-loja-preco">
+                    23,95
+                  </span>
+                  <br>
+                  <span class="item-carousel-loja-compre">
+                    <a href="#">
+                        Compre Agora
+                    </a>
+                  </span>
+                  <img src="src/img/carousel-items/Sneakers.png" class="item-carousel-loja-img">
+                </div>
+                <!-- fim item-carousel-loja -->
+  
+                <div class="item-carousel-loja">
+                  <span class="item-carousel-loja-titulo">
+                    Patão Sport Sneakers
+                  </span>
+                  <br>
+                  <span class="item-carousel-loja-preco">
+                    55,11
+                  </span>
+                  <br>
+                  <span class="item-carousel-loja-compre">
+                    <a href="#">
+                        Compre Agora
+                    </a>
+                  </span>
+                  <img src="src/img/carousel-items/Sneakers2.png" class="item-carousel-loja-img">
+                </div>
+                <!-- fim item-carousel-loja -->
+
+                <div class="item-carousel-loja">
+                  <span class="item-carousel-loja-titulo">
+                    Patão Therma Hoodie 
+                  </span>
+                  <br>
+                  <span class="item-carousel-loja-preco">
+                    46,76
+                  </span>
+                  <br>
+                  <span class="item-carousel-loja-compre">
+                    <a href="#">
+                        Compre Agora
+                    </a>
+                  </span>
+                  <img src="src/img/carousel-items/Hoodie.png" class="item-carousel-loja-img">
+                </div>
+                <!-- fim item-carousel-loja -->
+  
+
+              </div>
+              <!-- fim do carousel item -->
+              
             </div>
-            <div class="carousel-item">
-                <button type="button" class="btn btn-danger">testetesteteste</button>
-            </div>
-            <div class="carousel-item">
-              <button type="button" class="btn btn-primary">testetesteteste</button>
-            </div>
+            <!-- fim do carousel-inner -->
+
+            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+              <span class="fas fa-arrow-left text-dark" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+              <span class="fas fa-arrow-right text-dark" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+          <!-- fim carousel example -->
         </div>
+        <!-- fim carouselloja -->
+      </div>
+      <!-- fim da col -->
+    </div>
+    <!-- fim da row -->
+
+    <!-- TERCEIRA SEÇÃO DO SITE -->
+    <img src="src/img/backgrounds/background3.png" class="background-3">
+    <div class="container">
+      <div class="row">
+        <div class="col div-terceira-secao">
+          <div class="texto-cor-tematica">
+              <span class="letra-destaque">L</span>iga do Patão
+          </div>
+          <img src="src/img/carousel-items/Baseball-Cap-PNG-Image.png" class="mini-item">
+          <img src="src/img/carousel-items/Sneakers.png" class="mini-item">
+          <img src="src/img/carousel-items/Hoodie.png" class="mini-item">
+          <img src="src/img/carousel-items/Sneakers2.png" class="mini-item">
+          <div class="subtitulo-terceia-camada">
+            <a href="#">
+              Confira nossa coleção
+            </a>
+          </div>
+        </div>
+        <img src="src/img/jogadores/jogador2.png" class="player-overlay2">
       </div>
     </div>
-   
+
   </body>
 </html>

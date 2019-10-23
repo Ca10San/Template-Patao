@@ -29,6 +29,12 @@
     text-color: #{$text-color};
 }
 
+@mixin config-position($top: 0px,$position: static,$z-index: 0){
+    top: #{$top};
+    position: #{$position};
+    z-index: #{$z-index};
+}
+
 body {
     height: 100%;
     background-color: #121212;
@@ -38,6 +44,10 @@ body {
 
 .navbar-dark{
     background-color: #121212!important;
+}
+
+.navbar{
+    border-bottom: 1px solid white;
 }
 
 #logo{
@@ -79,19 +89,26 @@ $desktop: 1024px;
 }
 
 .player-overlay{
-    z-index: 3;
+    z-index: 3 !important;
     position: relative;
     
     @include tablet{
         height: 350px;
-        top: -650px;
+        top: -600px;
         left: -75px;
     }
-
-    @include desktop{
-
-    }
     
+}
+
+.player-overlay2{
+    z-index: 5 !important;
+    position: relative;
+
+    @include tablet{
+        height: 350px;
+        top: -1220px;
+        left: -70px;
+    }
 }
 
 .background-1{
@@ -118,6 +135,88 @@ $desktop: 1024px;
     }
 }
 
+.background-3{
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    @include tablet{
+        height: 300px;
+        left: 0px;
+        top: -900px;
+    }
+}
+
 #tituloloja{
-    @include config-texto(-950px,30px,black);
+    @include config-texto(-970px,30px,black);
+}
+
+#carrosselloja{
+    @include config-position(-950px,relative, 4);
+}
+
+.item-carousel-loja{
+    border: 1px dotted black;
+    display: inline-block;
+    text-align: left;
+    color: black;
+    width: 150px;
+    height: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.item-carousel-loja-titulo{
+    margin-left: 10px;
+}
+
+.item-carousel-loja-preco{
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.item-carousel-loja-compre a{
+    font-size: 15px;
+    color: red;
+    margin-left: 10px;
+}
+
+.item-carousel-loja-img{
+    width: 100px;
+    margin-left: 50%;
+    margin-top: -40%;
+}
+
+// TERCEIRA SEÇÃO DO SITE
+.div-terceira-secao{
+    top: -1150px;
+    z-index: 2;
+    font-size: 50px;
+}
+
+.letra-destaque{
+    font-size: 80px;
+}
+
+.texto-cor-tematica{
+    background: linear-gradient(120deg,#FFF94C,#185a9d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mini-item{
+    width: 50px;
+    background: #121212;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: -60px;
+}
+
+.subtitulo-terceia-camada a{
+    color: white;
+    font-size: 20px;
+    top: -40px;
+    border-bottom: 1px solid white;
+    position: relative;
+    display: block;
 }
