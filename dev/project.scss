@@ -5,6 +5,9 @@
     src: url("../font/bebas_neue/BebasNeue-Regular.woff2")format("woff2");
 }
 
+$tablet: 768px;
+$desktop: 1024px;
+
 @mixin smartphone{
     @media (max-width: #{$tablet - 2px}){
         @content;
@@ -35,13 +38,19 @@
     z-index: #{$z-index};
 }
 
+.zero-wasting{
+    height: 0px !important;
+}
+
 body {
-    height: 100%;
     background-color: #121212;
     font-family: "BebasNeue";
     color: white;
+    margin: 0px;
+    overflow-x: hidden;
 }
 
+// CABEÇALHO
 .navbar-dark{
     background-color: #121212!important;
 }
@@ -56,29 +65,9 @@ body {
     z-index: 5;
 }
 
-.text-fundo-branco{
-    color: black;
-    z-index: 5;
-    position: relative;
-}
-
-$tablet: 768px;
-$desktop: 1024px;
-
-.banner{
-    @include smartphone{
-        font-size: 100px !important;
-    }
-
-    @include tablet{
-        font-size: 200px !important;
-    }
-
-    @include desktop{
-        font-size: 250px !important;
-    }
-
-    font-size: 100px;
+// PRIMEIRA SEÇÃO DO SITE
+.div-primeira-secao{
+    height: 200px !important;
 }
 
 .switch-banner{
@@ -88,26 +77,42 @@ $desktop: 1024px;
     position: relative;
 }
 
+.banner{
+    @include smartphone{
+        font-size: 125px !important;
+    }
+
+    @include tablet{
+        font-size: 200px !important;
+    }
+
+    @include desktop{
+        font-size: 300px !important;
+    }
+
+    font-size: 100px;
+}
+
 .player-overlay{
     z-index: 3 !important;
     position: relative;
     
+    @include smartphone{
+        height: 300px;
+        top: -330px;
+        left: -50px;
+    }   
+    
     @include tablet{
-        height: 350px;
-        top: -600px;
+        height: 500px;
+        top: -650px;
         left: -75px;
     }
     
-}
-
-.player-overlay2{
-    z-index: 5 !important;
-    position: relative;
-
-    @include tablet{
-        height: 350px;
-        top: -1220px;
-        left: -70px;
+    @include desktop{
+        height: 800px;
+        top: -1000px;
+        left: -160px;
     }
 }
 
@@ -116,43 +121,82 @@ $desktop: 1024px;
     z-index: 1;
     position: relative;
 
+    @include smartphone{
+        height: 80%;
+        top: -120px;
+    }
+
     @include tablet{
-        height: 40%;
-        left: 0px;
+        height: 400px;
         top: -270px;
+    }
+
+    @include desktop{
+        height: 600px;
+        top: -430px;
     }
 }
 
+// SEGUNDA SEÇÃO DO SITE
 .background-2{
     position: relative;
     width: 100%;
     z-index: 4;
 
+    @include smartphone{
+        height: 250px;
+        top: -30px;
+    }
+
     @include tablet{
         height: 400px;
-        left: 0px;
-        top: -650px;
+        top: 130px;
+    }
+
+    @include desktop{
+        height: 900px;
+        top: 230px;
     }
 }
 
-.background-3{
+.text-fundo-branco{
+    color: black;
+    z-index: 5;
     position: relative;
-    width: 100%;
-    z-index: 1;
-
-    @include tablet{
-        height: 300px;
-        left: 0px;
-        top: -900px;
-    }
 }
 
 #tituloloja{
-    @include config-texto(-970px,30px,black);
+    @include smartphone{
+        @include config-texto(-240px,30px,black);
+    }
+
+    @include tablet{
+        @include config-texto(-200px,50px,black);
+    }  
+
+    @include desktop{
+        @include config-texto(-490px,100px,black);
+    }  
 }
 
 #carrosselloja{
-    @include config-position(-950px,relative, 4);
+    @include smartphone{
+        @include config-position(-240px,relative, 4);
+    }
+
+    @include tablet{
+        @include config-position(-180px,relative, 4);
+    }
+
+    @include desktop{
+        @include config-position(-400px,relative, 4);
+    }
+}
+
+.no-mobile{
+    @include smartphone{
+        display: none !important;
+    }
 }
 
 .item-carousel-loja{
@@ -164,10 +208,20 @@ $desktop: 1024px;
     height: 100px;
     margin-left: 20px;
     margin-right: 20px;
+
+    @include desktop{
+        border: 4px dotted black;
+        width: 350px;
+        height: 250px;
+    }    
 }
 
 .item-carousel-loja-titulo{
     margin-left: 10px;
+    
+    @include desktop{
+        font-size: 25px;
+    }
 }
 
 .item-carousel-loja-preco{
@@ -179,19 +233,89 @@ $desktop: 1024px;
     font-size: 15px;
     color: red;
     margin-left: 10px;
+    
+    @include desktop{
+        font-size: 25px;
+    }
 }
 
 .item-carousel-loja-img{
     width: 100px;
     margin-left: 50%;
     margin-top: -40%;
+
+    @include desktop{
+        width: 200px;
+        margin-left: 40%;
+        margin-top: -20%;
+    }
 }
 
 // TERCEIRA SEÇÃO DO SITE
+.player-overlay2{
+    z-index: 5 !important;
+    position: relative;
+
+    @include smartphone{
+        display: none;
+        height: 400px;
+        top: -990px;
+        left: 170px;
+    }
+
+    @include tablet{
+        height: 350px;
+        top: -470px;
+        left: -70px;
+    }
+
+    @include desktop{
+        height: 600px;
+        top: -850px;
+        left: 0px;
+    }
+}
+
+.background-3{
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    @include smartphone{
+        height: 300px;
+        left: 0px;
+        top: -250px;
+    }
+
+    @include tablet{
+        height: 300px;
+        left: 0px;
+        top: -130px;
+    }
+
+    @include desktop{
+        height: 500px;
+        left: 0px;
+        top: -300px;
+    }
+}
+
 .div-terceira-secao{
-    top: -1150px;
+    top: -700px;
     z-index: 2;
     font-size: 50px;
+
+    @include smartphone{
+        top: -500px;
+        line-height: 55px;
+        font-size: 50px;
+    }
+
+    @include tablet{
+        top: -350px;
+        line-height: 55px;
+        font-size: 50px;
+    }
 }
 
 .letra-destaque{
@@ -199,24 +323,409 @@ $desktop: 1024px;
 }
 
 .texto-cor-tematica{
-    background: linear-gradient(120deg,#FFF94C,#185a9d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    
+    @include smartphone{
+        line-height: 45px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    @include tablet{
+        background: linear-gradient(120deg,#FFF94C,#185a9d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    @include desktop{
+        background: linear-gradient(120deg,#FFF94C,#185a9d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
 
 .mini-item{
     width: 50px;
-    background: #121212;
+    background: grey;
     border-radius: 10px;
     padding: 10px;
-    margin-top: -60px;
+    margin-top: 0px;
 }
 
-.subtitulo-terceia-camada a{
+.subtitulo-terceira-camada a{
     color: white;
     font-size: 20px;
-    top: -40px;
+    top: -10px;
     border-bottom: 1px solid white;
     position: relative;
     display: block;
+}
+
+// QUARTA SEÇÃO DO SITE
+.background-4{
+    width: 100%;
+    height: 400px;
+    top: -360px;
+    position: relative;
+    z-index: 5;
+
+    @include smartphone{
+        height: 400px;
+        top: -360px;
+    }
+
+    @include tablet{
+        height: 400px;
+        top: -250px;
+    }
+
+    @include desktop{
+        height: 600px;
+        top: -470px;
+    }
+}
+
+.div-quarta-secao{
+    text-align: center;
+    top: -630px;
+    position: relative;
+    z-index: 5;
+    color: black;
+
+    @include smartphone{
+        top: -660px;
+    }
+    
+    @include tablet{
+        top: -530px;
+    }
+
+    @include desktop{
+        top: -900px;
+    }
+}
+
+.card-body{
+    @include desktop{
+        width: 60% !important;
+        margin-left: 20%;
+    }
+}
+
+.titulo-quarta-secao{
+    font-size: 30px;
+
+    @include desktop{
+        font-size: 70px;
+    }
+}
+
+.item-evento-carousel{
+    padding: 10px;
+    @include desktop{
+        height: 300px;
+    }
+}
+
+#carrosseleventos{
+    @include config-position(-15px,relative, 4);
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px gray;
+
+    @include desktop{
+        border-radius: 5px;
+    }
+}
+
+.item-carousel-eventos{
+    display: inline-block;
+    text-align: left;
+    color: black;
+    width: 150px;
+    height: 150px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @include smartphone{
+        width: 10%;
+        height: 200px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    @include desktop{
+        left: 150px;
+    }
+}
+
+.item-carousel-eventos-local{
+    font-size: 20px;
+    text-align: left;
+    margin-left: -230px;
+    width: 250px;
+
+    @include smartphone{
+        word-wrap: none !important;
+        margin-left: -100px;
+        text-align: left;
+        display: inline-table;
+    }
+
+    @include desktop{
+        font-size: 30px;
+        margin-top: 100px !important;
+        margin-left: -425px;
+        text-align: center;
+    }
+}
+
+.item-carousel-eventos-descricao{
+    font-size: 11px;
+    text-align: left;
+    left: 0px;
+    
+    @include smartphone{
+        left: 55px;
+        width: 100px !important;
+        text-align: unset;
+        position: absolute;
+    }
+
+    @include tablet{
+        left: -230px;
+        position: relative;
+    }
+
+    @include desktop{
+        left: 50px;
+        font-size: 20px;
+        position: absolute;
+        width: 300px;
+    }
+}
+
+.item-carousel-eventos-info{
+    margin-left: -230px;
+    position: relative;
+
+    @include smartphone{
+        margin-left: -60px;
+        top: 120px;
+    }
+
+    @include tablet{
+        margin-left: -235px;
+        top: 25px;
+    }
+
+    @include desktop{
+        margin-left: -425px;
+        top: 150px;
+    }
+}
+
+.item-carousel-eventos-info button{
+    width: 150px;
+
+    @include desktop{
+        width: 250px;
+        font-size: 25px;
+    }
+}
+
+.item-carousel-eventos-img{
+    width: 280px;
+    margin-left: 10%;
+    margin-top: -156px;
+    border-radius: 15px;
+    
+
+    @include smartphone{
+        width: 120px;
+        height: 100px;
+        margin-left: 40px;
+        margin-top: -80px;
+        position: relative;
+    }
+
+    @include tablet{
+        width: 350px;
+        height: 180px;
+        margin-left: 40px;
+        margin-top: -155px;
+    }
+
+    @include desktop{
+        width: 450px;
+        height: 250px;
+        margin-left: 100px;
+        margin-top: -100px;
+    }
+}
+
+// QUINTA SEÇÃO DO SITE
+.background-5{
+    height: 150px;
+    width: 100%;
+    top: -370px;
+    position: relative;
+    z-index: 1;
+
+    @include smartphone{
+        top: -360px;
+        height: 100px;
+    }
+
+    @include tablet{
+        top: -250px;
+        height: 100px;
+    }
+
+    @include desktop{
+        top: -470px;
+        height: 200px;
+    }
+}
+
+.div-quinta-secao{
+    z-index: 2;
+    top: -430px;
+
+    @include desktop{
+        top: -610px;
+        left: 21%;
+    }
+}
+
+.busca{
+    margin-left: 0px;
+    margin-top: -40px !important;
+    width: 200px;
+    display: inline-block;
+
+    @include smartphone{
+        margin-left: 40px;
+        margin-top: -30px !important;
+        width: 200px;
+        display: inline-block;
+    }
+
+    @include tablet{
+        margin-left: 100px;
+        margin-top: 115px !important;
+        width: 200px;
+        display: inline-block;
+    }
+
+    @include desktop{
+        margin-left: 100px;
+        margin-top: -100px !important;
+        width: 500px;
+        display: inline-block;
+    }
+}
+
+.texto-quinta-secao{
+    display: inline-block;
+    font-size: 30px;
+    position: relative;
+    top: -30px;
+    left: 50px;
+
+    @include tablet{
+        top: -32px;
+    }
+
+    @include desktop{
+        top: 13px;
+        left: 50px;
+        font-size: 50px;
+    }
+}
+
+.botao-pesquisa{
+    @include desktop{
+        width: 400px !important;
+    }
+}
+
+.botao-procurar{
+    display: inline;
+    position: relative;
+
+    @include smartphone{
+        top: -46px;
+        left: 220px;
+    }
+
+    @include tablet{
+        top: -40px;
+        left: 220px;
+    }
+}
+
+// SEXTA SEÇÃO DO SITE
+.col.div-sexta-secao{
+    padding: 40px 40px;
+    height: 100px !important;
+    margin-top: -450px;
+    z-index: 6;
+    position: relative;
+    border-bottom: 1px solid white !important;
+
+    @include smartphone{
+    
+    }
+}
+
+.text-footer{
+    padding: 10px;
+}
+
+.text-footer a{
+    color: white;
+}
+
+.text-footer a:hover{
+    text-decoration: none;
+}
+
+.redes-sociais{
+    @include tablet{
+        position: relative;
+        top: -48px;
+        left: 500px;
+    }
+
+    @include desktop{
+        position: relative;
+        top: -48px;
+        left: 1650px;
+    }
+}
+
+.redes-sociais i{
+    margin-left: 10px;
+}
+
+.logo-footer{
+    @include smartphone{
+        width: 300px;
+        top: -300px;
+        left: 30px;
+        position: relative;
+    }
+
+    @include tablet{
+        width: 300px;
+        top: -300px;
+        left: 240px;
+        position: relative;
+    }
+
+    @include desktop{
+        width: 400px;
+        top: -300px;
+        left: 800px;
+        position: relative;
+    }
 }
