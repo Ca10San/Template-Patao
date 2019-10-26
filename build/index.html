@@ -25,13 +25,11 @@
   </head>
   <body>
     <!-- Cabeçalho/ Barra de Navegação-->
+    <img src="src/img/logo.png" id="logo">
     <div class="container">
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">
-          <img src="src/img/logo.png" id="logo">
-        </a>
         <!-- Toggle rNavbar -->
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        <button class="navbar-toggler d-lg-none margin-left" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -40,22 +38,27 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Futebol<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#">
+                Home
+                <span class="sr-only">
+                  (current)
+                </span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Acessórios</a>
+              <a class="nav-link" href="#">Como funciona</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Camisetas</a>
+              <a class="nav-link menu-margin" href="#">Nossas Ligas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Calçados</a>
+              <a class="nav-link" href="#">Dados da rodada</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Eventos</a>
+              <a class="nav-link" href="#">Suporte</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contato</a>
+              <a class="nav-link" href="#">Entrar</a>
             </li>
           </ul>
         </div>
@@ -66,26 +69,15 @@
     <div class="row div-primeira-secao">
       <div class="col text-center div-primeira-secao">
           <div class="banner">
-              <span class="switch-banner">
-                F
-              </span>
-              u
-              <span class="switch-banner">
-                t
-              </span>
-              e
-              <span class="switch-banner">
-                b
-              </span>
-              o
-              <span class="switch-banner">
-                l
-              </span>
+              Seja o mito da rodada e concorra a excelentes premiações
           </div>
-          <!-- DIVISORIA GRADIENTE -->
-          <img src="src/img/backgrounds/background1.png" class="background-1">   
-          <!--  -->
-          <img src="src/img/jogadores/jogador1.png" class="player-overlay">
+          <!-- DIVISORIA transparente -->
+          <img src="src/img/backgrounds/background0.png" class="background-0">  
+          <img src="src/img/backgrounds/background1.png" class="background-1"> 
+          <button type="button" class="btn btn-warning btn-principal mr-2">
+            <i class="fas fa-star text-white mr-2"></i> 
+             Conheça nossas ligas
+          </button>
       </div>
     </div>
     <!-- FIM DA PRIMEIRA SEÇÃO DO SITE -->

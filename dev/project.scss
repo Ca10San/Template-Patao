@@ -42,27 +42,101 @@ $desktop: 1024px;
     height: 0px !important;
 }
 
+html{
+    overflow-x: hidden !important;
+}
+
 body {
     background-color: #121212;
     font-family: "BebasNeue";
     color: white;
     margin: 0px;
-    overflow-x: hidden;
 }
 
 // CABEÇALHO
 .navbar-dark{
-    background-color: #121212!important;
+    background-color: rgba(0,0,0,0)!important;
 }
 
 .navbar{
     border-bottom: 1px solid white;
+    z-index: 1;
+    
+    @include smartphone{
+        top: 50px;
+    }
+}
+
+a.nav-link{
+    @include desktop{
+        font-size: 30px !important;
+        padding: 10px 20px !important;
+    }
+}
+
+a.menu-margin{
+    @include tablet{
+        margin-right: 220px;
+    }
+
+    @include desktop{
+        margin-right: 195px;
+    }
+}
+
+button.margin-left{
+    @include smartphone{
+        margin-left: auto !important;
+    }
+}
+
+.btn-principal{
+    position: relative;
+
+    @include smartphone{
+        top: -465px !important;    
+    }
+
+    @include tablet{
+        top: -950px !important; 
+        font-size: 25px;     
+    }
+
+    @include desktop{
+        top: -1250px !important;  
+        font-size: 30px;  
+    }
 }
 
 #logo{
-    height: 50px;
-    width: 50px;
+    position: absolute;
+    top: 20px;
+    left: 900px;
+    height: 200px;
+    width: 200px;
     z-index: 5;
+
+    @include smartphone{
+        top: 0px;
+        left: 135px;
+        height: 100px;
+        width: 100px;
+    }
+
+
+    @include tablet{
+        top: 0px;
+        left: 320px;
+        height: 150px;
+        width: 150px;
+    }
+
+    @include desktop{
+        top: 0px;
+        left: 860px;
+        height: 200px;
+        width: 200px;
+    }
 }
 
 // PRIMEIRA SEÇÃO DO SITE
@@ -70,49 +144,53 @@ body {
     height: 200px !important;
 }
 
-.switch-banner{
-    z-index: 2;
-    padding: 0px;
-    margin: 0px;
-    position: relative;
-}
-
 .banner{
     @include smartphone{
-        font-size: 125px !important;
+        margin-top: 50px;
+        font-size: 30px !important;
     }
 
     @include tablet{
-        font-size: 200px !important;
+        margin-top: 90px;
+        font-size: 50px !important;
     }
 
     @include desktop{
-        font-size: 300px !important;
+        position: relative;
+        width: 1000px;
+        top: 100px;
+        left: 450px;
+        font-size: 75px !important;
     }
 
     font-size: 100px;
 }
 
-.player-overlay{
-    z-index: 3 !important;
+
+.background-0{
+    width: 100%;
+    z-index: 0;
     position: relative;
-    
+    opacity: 0.1;
+
     @include smartphone{
         height: 300px;
-        top: -330px;
-        left: -50px;
-    }   
-    
-    @include tablet{
-        height: 500px;
-        top: -650px;
-        left: -75px;
+        top: -220px;
+        left: -289px;
+        width: 180%;
     }
-    
+
+    @include tablet{
+        height: 470px;
+        top: -320px;
+        left: -230px;
+        width: 130%;
+    }
+
     @include desktop{
         height: 800px;
-        top: -1000px;
-        left: -160px;
+        top: -350px;
+        width: 100%;
     }
 }
 
@@ -120,20 +198,21 @@ body {
     width: 100%;
     z-index: 1;
     position: relative;
+    opacity: 0.1;
 
     @include smartphone{
         height: 80%;
-        top: -120px;
+        top: -370px;
     }
 
     @include tablet{
-        height: 400px;
-        top: -270px;
+        height: 500px;
+        top: -690px;
     }
 
     @include desktop{
         height: 600px;
-        top: -430px;
+        top: -1000px;
     }
 }
 
