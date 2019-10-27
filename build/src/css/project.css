@@ -58,26 +58,22 @@ body {
 #logo {
   position: absolute;
   top: 20px;
-  left: 900px;
   height: 200px;
   width: 200px;
   z-index: 5; }
   @media (max-width: 766px) {
     #logo {
       top: 0px;
-      left: 135px;
       height: 100px;
       width: 100px; } }
   @media (min-width: 768px) and (max-width: 1023px) {
     #logo {
       top: 0px;
-      left: 320px;
       height: 150px;
       width: 150px; } }
   @media (min-width: 1024px) {
     #logo {
       top: 0px;
-      left: 860px;
       height: 200px;
       width: 200px; } }
 
@@ -85,6 +81,7 @@ body {
   height: 200px !important; }
 
 .banner {
+  z-index: 3;
   font-size: 100px; }
   @media (max-width: 766px) {
     .banner {
@@ -99,7 +96,6 @@ body {
       position: relative;
       width: 1000px;
       top: 100px;
-      left: 450px;
       font-size: 75px !important; } }
 
 .background-0 {
