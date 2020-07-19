@@ -1,6 +1,6 @@
-# Template-Patao
+# Template-Football
 
-Como requerido pelo cliente Bruno Oliveira via 99 Freelas.
+Criado apenas com CSS e HTML puros apenas (com uso de basico de bibliotecas simples de JS).
 
 ## Documentação do template
 
